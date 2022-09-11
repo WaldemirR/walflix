@@ -1,6 +1,17 @@
-var listaFilmes = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPML32aUf3UmjG4GS9fJdAwZ1T0eZAOHPllQ&usqp=CAU","https://i0.wp.com/www.museumazzaropi.org.br/wp-content/uploads/2020/09/TristezaDoJeca-scaled.jpg?fit=1678%2C2560&ssl=1","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY3MF7UrJYAeOT347DJD7sJPXEnhFgi0jf5g&usqp=CAU","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMs1GmLMo-43spe0lCwOc40D97wWjQlUbTOQ&usqp=CAU",""];
+function adicionarFilme(){
 
-for (var i = 0; i < listaFilmes.length; i++){
+    var filmeFavorito = document.getElementById("filme").value;
+    if (filmeFavorito.endsWith(".jpg")){
+    listarFilmesNaTela(filmeFavorito);
+} else {
+    console.error("Endereço de imagem inválido");
+}
+    document.getElementById("filme").value = "";
+    
+}
 
-    document.write("<img src="+ listaFilmes[i] +">");
+function listarFilmesNaTela(filme){
+    var elementoFilmeFavorito = "<img src" + filme + ">";
+    var elementoListaFilmes = document.getElementById("listaFilmes");
+    elementoListaFilmes.innerHTML = elementoListaFilmes.innerHTML + elementoFilmeFavorito;
 }
