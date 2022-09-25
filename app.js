@@ -1,7 +1,7 @@
 function adicionarFilme(){
 
     var filmeFavorito = document.getElementById("filme").value;
-    if (filmeFavorito.endsWith(".jpg")){
+    if (filmeFavorito.endsWith(".jpeg")){
     listarFilmesNaTela(filmeFavorito);
 } else {
     console.error("Endereço de imagem inválido");
@@ -15,3 +15,5 @@ function listarFilmesNaTela(filme){
     var elementoListaFilmes = document.getElementById("listaFilmes");
     elementoListaFilmes.innerHTML = elementoListaFilmes.innerHTML + elementoFilmeFavorito;
 }
+
+
